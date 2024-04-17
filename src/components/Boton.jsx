@@ -1,12 +1,10 @@
-import { useState } from 'react'
 import '../css/Boton.css'
 
-function Boton({clase, contenido}) {
-  const [count, setCount] = useState(0)
+function Boton(props) {
 
   return (
     <>
-      <button className={clase}>{contenido}</button>
+      <button className={props.clase}>{props.contenido}</button>
     </>
   )
 }
