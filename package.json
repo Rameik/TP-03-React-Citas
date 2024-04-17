@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage":"https://rameik.github.io/TP-03-React-Citas/",
+  "homepage": "https://rameik.github.io/TP-03-React-Citas/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
