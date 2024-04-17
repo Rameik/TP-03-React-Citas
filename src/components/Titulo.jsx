@@ -1,8 +1,8 @@
 import '../css/Titulo.css'
 
 function Titulo(props) {
-    const tipo1 = tipo === "1" ? true : false
-    const tipo2 = tipo === "2" ? true : false
+    const tipo1 = props.tipo === "1" ? true : false
+    const tipo2 = props.tipo === "2" ? true : false
 
     return (
         <>
