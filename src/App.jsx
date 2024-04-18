@@ -42,7 +42,7 @@ function App() {
               <InputFormulario tipo="text" contenidoLabel="Nombre dueño" name="nombreDueño" placeholder="Nombre dueño de la mascota"/>
               <InputFormulario tipo="date" contenidoLabel="Fecha" name="fecha" placeholder=""/>
               <InputFormulario tipo="time" contenidoLabel="Hora" name="hora" placeholder=""/>
-              <InputFormulario tipo="text" contenidoLabel="Sintomas" name="sintomas" placeholder=""/>
+              <InputFormulario tipo="textarea" contenidoLabel="Sintomas" name="sintomas" placeholder=""/>
               <Boton clase="u-full-width button-primary" contenido="Agregar cita"/>
             </form>
           </div>
