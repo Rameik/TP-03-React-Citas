@@ -1,10 +1,17 @@
 import '../css/Boton.css'
 
-function Boton(props) {
+function Boton({eliminar, clase, contenido, citas, updateState, index}) {
+  const handleClick = () => {
+    if(!eliminar) return
+    const nuevasCitas = [...citas];
+    nuevasCitas.splice(index, 1);
+    updateState(nuevasCitas);
+  }
+
 
   return (
     <>
-      <button className={props.clase}>{props.contenido}</button>
+      <button onClick={handleClick} className={clase}>{contenido}</button>
     </>
   )
 }
