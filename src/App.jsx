@@ -1,12 +1,9 @@
 import './App.css'
 import Citas from './components/Citas.jsx'
 import Titulo from './components/Titulo.jsx'
-import { useContext } from 'react'
-import { CitasContext } from './context/citas.jsx'
 import { Formulario } from './components/Formulario.jsx'
 
 function App() {
-  const { citas } = useContext(CitasContext)
 
   return (
     <>
@@ -19,7 +16,7 @@ function App() {
           </div>
           <div className='one-half column'>
             <Titulo tipo="2" contenido='Administra tus citas'/>
-            <Citas citas={citas}/>
+            <Citas/>
           </div>
         </div>
       </div>

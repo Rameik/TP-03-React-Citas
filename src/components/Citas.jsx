@@ -1,7 +1,11 @@
 import '../css/Cita.css'
 import Boton from "./Boton.jsx";
+import { useContext } from 'react'
+import { CitasContext } from '../context/citas.jsx'
 
-function Citas({citas}) {
+function Citas() {
+  const { citas } = useContext(CitasContext)
+
   return (
     <>
       {citas.map((cita, index) => (
