@@ -1,9 +1,8 @@
-import { useContext } from 'react';
 import '../css/Boton.css'
-import { CitasContext } from '../context/citas';
+import { useCitas } from '../hooks/useCitas';
 
 function Boton({eliminar, clase, contenido, index}) {
-  const { citas, setCitas } = useContext(CitasContext)
+  const { citas, setCitas } = useCitas()
 
   const handleClick = () => {
     if(!eliminar) return

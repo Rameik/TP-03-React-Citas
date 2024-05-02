@@ -3,7 +3,6 @@ import Cita from "../models/Cita";
 
 export const CitasContext = createContext()
 
-// Crear provider
 export function CitasProvider ({children}) {
     const [citas, setCitas] = useState([
         new Cita("Nina", "Martin", "2021-08-05", "08:20", "Le duele la pierna"),

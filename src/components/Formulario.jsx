@@ -1,11 +1,10 @@
 import InputFormulario from './InputFormulario.jsx'
 import Boton from './Boton.jsx'
 import Cita from '../models/Cita.js'
-import { useContext } from 'react'
-import { CitasContext } from '../context/citas.jsx'
+import { useCitas } from '../hooks/useCitas.js'
 
 export function Formulario () {
-    const { citas, setCitas } = useContext(CitasContext)
+    const { citas, setCitas } = useCitas()
 
     const handleSubmit = (e) => {
         e.preventDefault()

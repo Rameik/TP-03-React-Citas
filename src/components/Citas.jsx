@@ -1,10 +1,9 @@
 import '../css/Cita.css'
 import Boton from "./Boton.jsx";
-import { useContext } from 'react'
-import { CitasContext } from '../context/citas.jsx'
+import { useCitas } from '../hooks/useCitas';
 
 function Citas() {
-  const { citas } = useContext(CitasContext)
+  const { citas } = useCitas()
 
   return (
     <>
