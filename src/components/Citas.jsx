@@ -1,4 +1,4 @@
-import '../css/Cita.css'
+import '../css/Citas.css'
 import Boton from "./Boton.jsx";
 import { useCitas } from '../hooks/useCitas';
 

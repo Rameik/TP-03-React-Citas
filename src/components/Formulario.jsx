@@ -8,9 +8,15 @@ export function Formulario () {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const { nombreMascota, nombreDueño, fecha, hora, sintomas } = Object.fromEntries(new FormData(e.target))
-        const newCita = new Cita(nombreMascota, nombreDueño, fecha, hora, sintomas)
-        setCitas([...citas, newCita]);
+        if (confirm("¿Desea agregar la cita ingresada?")) {
+            const { nombreMascota, nombreDueño, fecha, hora, sintomas } = Object.fromEntries(new FormData(e.target))
+            if (![nombreMascota, nombreDueño, fecha, hora, sintomas].some(element => element.length === 0)) {
+                const newCita = new Cita(nombreMascota, nombreDueño, fecha, hora, sintomas)
+                setCitas([...citas, newCita]);
+                e.target.reset()
+            }
+            else { alert("Un campo estaba vacío!") }
+        }
     }
 
     return (
